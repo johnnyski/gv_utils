@@ -1,0 +1,206 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.7 [en] (X11; U; Linux 2.2.12 i686) [Netscape]">
+   <meta name="Keywords" content="ZR Tables, ZR Tables Generation, ZR Table">
+   <title>TRMM Office ZR Tables Generation</title>
+</head>
+<body text="#000000" bgcolor="#C0C0C0" link="#0000EE" vlink="#551A8B" alink="#FF0000" background="gv_utils_bg.gif">
+&nbsp;
+<center><table BORDER=4 CELLSPACING=3 CELLPADDING=3 WIDTH="100%" >
+<tr ALIGN=CENTER VALIGN=CENTER>
+<td ALIGN=CENTER VALIGN=CENTER COLSPAN="2" ROWSPAN="2"><img SRC="gv_utils_logo.gif" height=100 width=256></td>
+
+<td><b><font color="#800080"><font size=+4>TRMM Ground Validation Utilities
+Software</font></font></b></td>
+</tr>
+</table></center>
+
+<center><table BORDER=2 CELLSPACING=2 CELLPADDING=2 COLS=6 WIDTH="100%" BGCOLOR="#CCCCCC" NOSAVE >
+<tr ALIGN=CENTER VALIGN=CENTER NOSAVE>
+<td>
+<center><b><font color="#000099">Current Version:</font></b>
+<br>1.17</center>
+</td>
+
+<td>
+<center><b><font color="#000099">Released Date:</font></b>
+<br>9/04/03&nbsp;</center>
+</td>
+
+<td>
+<center><b><font color="#000080">Document updated</font><font color="#000000">:</font></b><font color="#000000">
+8/19/98</font></center>
+</td>
+
+<td>
+<center><b><font color="#330033">See&nbsp;<a NAME="Readme"></a><a href="../README">Readme</a></font></b></center>
+</td>
+
+<td>
+<center><b><font color="#330033">See&nbsp;<a NAME="Changes"></a><a href="../CHANGES">Changes</a></font></b></center>
+</td>
+
+<td ALIGN=CENTER VALIGN=CENTER NOSAVE>
+<center><a NAME="Download"></a><b><font color="#330033"><a href="ftp://trmm-fc.gsfc.nasa.gov/software/gv_utils-LATEST.tgz">Download</a>
+Software</font></b></center>
+</td>
+</tr>
+</table></center>
+
+<hr SIZE=4 WIDTH="100%">
+<h3>
+<a NAME="Description"></a><font color="#000080">Description</font></h3>
+<font color="#000000">This software package developed by the <a href="http://trmm-fc.gsfc.nasa.gov/trmm_gv/index.html">TRMM
+Office</a> is in <a href="http://trmm-fc.gsfc.nasa.gov/trmm_gv/software/gvbox/gvbox.html">GVBOX</a>.&nbsp; It
+contains shared C and Perl routines and programs used by the software developed
+for TRMM Ground Validation purposes.To use the shared routines in this
+package, include the library, </font><b><i><font color="#993300">libgv_utils.a</font></i></b><font color="#000000">,
+and the header file, </font><b><i><font color="#993300">gv_utils.h</font></i></b><font color="#000000">,
+in your Makefile and/or </font><b><i><font color="#993300">gv_utilities.pl</font></i></b><font color="#000000">in
+your Perl program as shown in the <a href="#Examples">Examples Section.</a></font>
+<center>
+<hr WIDTH="100%"></center>
+
+<h3>
+<a NAME="C Function Prototypes"></a><font color="#000099">C Function Prototypes</font></h3>
+<font color="#000000">C Function Prototypes are defined in the following
+header files:</font>
+<ul>
+<li>
+<font color="#000000"><i>gv_file.h.</i> Contains routines for file manipulations.</font></li>
+
+<li>
+<font color="#000000"><i>gv_string.h. </i>Contains routines for string
+manipulations.</font></li>
+
+<li>
+<font color="#000000"><i>gv_utilities.h.</i> Contains miscellaneous routines.</font></li>
+
+<li>
+<font color="#000000"><i>gv_site.h.</i> Contains GV sites related routines.</font></li>
+
+<li>
+<font color="#000000"><i>gv_time.h.</i> Contains time related routines.</font></li>
+</ul>
+
+<hr WIDTH="100%">
+<h3>
+<a NAME="Perl Routines"></a><font color="#000099">Perl Routines</font></h3>
+<font color="#000000">&nbsp;&nbsp;&nbsp; Perl routines are defined in <i>gv_utilities.pl</i>.</font>
+<br>
+<hr WIDTH="100%">
+<h3>
+<a NAME="Programs"></a><font color="#000099">Programs</font></h3>
+
+<ul>
+<li>
+&nbsp;<i>construct_time_in_seconds.</i> Construct time in seconds.</li>
+
+<li>
+&nbsp;<i>get_gv_radar_site_info.</i> Get GV radar site information from
+<i>gv_radar_site_info.data.</i></li>
+
+<li>
+&nbsp;<i>get_site_info_from_raw_file.</i> Get GV radar site information
+from raw radar file.</li>
+</ul>
+
+<hr WIDTH="100%">
+<h3>
+<a NAME="C Library"></a><font color="#000099">C Library</font></h3>
+<font color="#000000">&nbsp;&nbsp;&nbsp; <i>libgv_utils.a</i></font>
+<br>
+<hr WIDTH="100%">
+<h3>
+<a NAME="Data File(s)"></a><font color="#000099">Data File(s)</font></h3>
+<i><a href="../gv_radar_site_info.data">gv_radar_site_info.data</a>.&nbsp;
+
+</i>Contains central GV radar site information.&nbsp; Application should
+use the provided interface routine to access site information for compatibility.
+<br>
+<hr WIDTH="100%">
+<h3>
+<a NAME="Examples"></a><font color="#000099">Examples</font></h3>
+
+<h4>
+<a NAME="Compiling with the C library"></a><font color="#000000">Using
+the C Shared routines</font></h4>
+<font color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+/* construct_time_in_seconds.c</font>
+<br><font color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+*/</font>
+<br><font color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+...</font>
+<br><font color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+#include &lt;gv_utils.h></font>
+<p><font color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+main (int argc, char **argv)</font>
+<br><font color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+{</font>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+int yr, mon, day, hr, min, sec;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+time_t time_secs;
+<br><font color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+...</font>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+yr = 1998;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+mon = 8;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+day = 1;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+hr = 1;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+min = 20;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+sec = 0;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+time_secs = gv_utils_construct_time(yr, mon, day, hr, min, sec);
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+...
+<br><font color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}</font>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Makefile
+<ul>
+<pre><font color="#000000">TOPDIR = /usr/local/trmm/GVBOX/
+GV_UTILS_LIBDIR = $(TOPDIR)/lib
+GV_UTILS_INCDIR = $(TOPDIR)/include
+gv_utils_libs = -L$(GV_UTILS_LIBDIR) <i>-lgv_utils
+</i>libs1 =&nbsp; -L. $(gv_utils_libs)
+PROG1 = construct_time_in_seconds
+OBJS1 = construct_time_in_seconds.o&nbsp;
+LDFLAGS = -O
+CFLAGS = -ansi
+CINC = -I. -I$(<i>GV_UTILS_INCDIR</i>)
+$(PROG1): $(OBJS1) Makefile
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $(CC) $(LDFLAGS) -o $@ $(OBJS1) $(libs1)
+.c.o:&nbsp; Makefile
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $(CC)&nbsp; -c $(CFLAGS) $(CINC) $&lt;</font></pre>
+</ul>
+
+<h4>
+<a NAME="Using the Perl routines"></a><font color="#000000">Using the Perl
+routines</font></h4>
+
+<ul>
+<pre><font color="#000000"># myprog.pl</font></pre>
+
+<pre><font color="#000000">unshift (@INC, "/usr/local/trmm/GVBOX/bin");
+do '<i>gv_utilities.pl</i>';
+# Starts your program</font></pre>
+
+<pre><font color="#000000">...</font></pre>
+</ul>
+
+<pre>
+<hr WIDTH="100%"></pre>
+
+<h3>
+<font color="#000080">Author</font></h3>
+<font color="#000000">Ngoc-Thuy Nguyen, <i>Science Systems and Applications
+Inc.(SSAI), NASA/GSFC/TRMM Office</i></font>
+</body>
+</html>

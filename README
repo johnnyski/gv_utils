@@ -1,0 +1,102 @@
+v1.17 (9/04/2003)
+
+This is the README file for the TRMM Ground Validation Utilities Software 
+(gv_utils). It includes shared routines and programs utilized by the 
+software developed for TRMM Ground Validation purposes.
+
+To use the shared routines in this package, include the following library and
+header file in your Makefile or the Perl file in your Perl program:
+
+   The C library:      libgv_utils.a
+   The C header file:  gv_utils.h
+   The Perl file:      gv_utilities.pl 
+
+Executable files are in programs/:
+   * construct_time_in_seconds - Construct time in seconds.
+   * get_gv_radar_site_info    - Get GV radar site information from
+                                 gv_radar_site_info.data.
+   * get_site_info_from_raw_file 
+                               - Get GV radar site information from raw 
+                                 radar file.
+
+Data file(s):
+   * gv_radar_site_info.data - Contains GV radar sites'information.
+
+Documentation:
+   * gv_utils_index.html.
+
+
+
+REQUIREMENTS:
+-------------
+1.  The required libraries are:
+    - HDF4.1* -- Obtain via anonymous ftp to ftp.ncsa.uiuc.edu in HDF.
+    - rsl-LATEST.tgz -- Available at ftp://trmm-fc.gsfc.nasa.gov/software
+    - toolkit-v5.* -- Available at http://tsdis.gsfc.nasa.gov/tsdis/tsdistk.html
+        and ftp://trmm-fc.gsfc.nasa.gov/software
+      
+
+   Note:  GVS products are compatible with the current or future versions
+   of the software above unless specified otherwise. Please contact the 
+   owner of those software for any update with bug fixes.
+
+2. The required GNU package(s) are available via ftp to ftp.uu.net.
+   The package(s) are:
+
+	perl
+
+3. Compilers: C. GNU compiler is acceptable.
+   
+4. Flatform:  HP, SGI, or Linux (Tested for SGI & Linux)
+
+
+
+INSTALLATION INSTRUCTIONS:
+-------------------------
+1. Make sure the required software packages are built and installed.
+
+2. configure
+   make install   - This installs the library for 'programs'.
+                    And, it will install files in 'programs'.
+
+   NOTE: Simply doing a make will fail in the subdirectory 'programs'
+         as libgv_utils.a(so) is not installed.
+
+4. Set the shell environment variable, GVS_DATA_PATH, to be the same 
+   directory you have set for variable, DATDIR, in the Makefile.
+
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+EXECUTION NOTES:
+----------------
+1. Set enviroment variables: $GVS_DATA_PATH and $TSDISTK.
+
+
+
+CONTRIBUTORS/COMPONENTS:
+------------------------
+
+  1. Ngoc- Thuy Nguyen, Science Systems and Applications Inc.
+  2. John H. Merritt, SM&A Corp. 
+  
+QUESTIONS:
+----------
+
+Please contact AEAP/TRMM Office help via e-mail at help@trmm.gsfc.nasa.gov.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

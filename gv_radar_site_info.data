@@ -1,0 +1,76 @@
+#
+#
+# This file contains the site information for the TRMM Ground Validation (GV) 
+# radar sites.  Line starts with '#' is comment.
+# Fields are deliminated by ','. 
+#
+# Field Description:
+#   TSDIS_Name:      4-upper-case characters, TSDIS' site name.
+#   WSR88D_ID:       WSR88D callID in RSL. Use '-' for not available or '?' 
+#                    for don't know.
+#   City:            String(s) represented city name. Use '?' for don't know.
+#   State:           2-upper case characters. Use '?' for don't know.
+#   Country:         String(s) represented country. Use 'NA' for not 
+#                    available or '?' for don't know.
+#   Radar Name:      Strings represented radar name in RSL. Use '?' for 
+#                    don't know.
+#   Lat:             Latitude. Use 0.0 for don't know.
+#   Lon:             Longitude. Use 0.0 for don't know.
+#   SPRINT Radar ID: Radar ID for SPRINT's script.  This number must be 
+#                    defined in 'sprint'.
+#  
+#  Use routine, gv_utils_get_radar_site_info(), defined in 'gv_site.h' to 
+#  access the information in this file since this file's format may be 
+#  changed in the future.
+# 
+# TSDIS  WSR88D                                     Radar                              SPRINT
+# Name,    ID,   City,         State, Country,      Name,           Lat,        Lon,   radar_ID
+#--------------------------------------------------------------------------------------------
+# Florida
+  JACK,   KJAX,  Jacksonville,   FL,  USA,          ?,           30.484722,  -81.701942,  31
+  KEYW,   KBYX,  Key West,       FL,  USA,          ?,           24.597500,  -81.703056,  32
+  MELB,   KMLB,  Melbourne,      FL,  USA,          KMLB,        28.113333,  -80.654167,  21
+  RADT,      -,  Nassau,         FL,  USA,          ?,           28.113333,  -80.654167,  21
+  MIAM,   KAMX,  Miami,          FL,  USA,          KAMX,        25.611111,  -80.412781,  30
+  TALL,   KTLH,  Tallahassee,    FL,  USA,          ?,           30.397499,  -84.328888,  33
+  TAMP,   KTBW,  Tampa Bay,      FL,  USA,          ?,           27.705555,  -82.401665,  29
+# LA
+  LKCH,   KLCH,  Lake Charles,   LA,  USA,          ?,           30.125278,  -93.215836,  40
+# Texas
+  KAMA,   KAMA,  Amarillo,       TX,  USA,          KAMA,        35.233333, -101.709167,  51
+  CORC,   KCRP,  Corpus Christi, TX,  USA,          ?,           27.784166,  -96.488892,  35
+  BROW,   ?,     Brownsville,    TX,  USA,          ?,           25.916111,  -97.418892,  36
+  HSTN,   KHGX,  Houston,        TX,  USA,          KHGX,        29.471945,  -95.079170,  34
+  GRAN,   KGRK,  Granger AFB,    TX,  USA,          ?,            0.0,         0.0,       37
+  NWBR,   -,     New Braunfels,  TX,  USA,          ?,           29.706388,  -98.050278,  38
+  TAMU,   ?,     TAMU ADRAD,     TX,  USA,          ?,           30.617777,  -96.336113,  39
+# Hawaii
+  HAWA,   ?,     S_Kauai,        HA,  USA,          ?,           21.894167, -159.552216, 45
+# Australia
+  DARB,   -,     Berrimah,       NA,  Australia,    Berrima,    -12.457222,  130.925278,  23
+  DARW,   -,     Gunn Point,     NA,  Australia,    Gunn_Pt,    -12.248333,  131.044724,  44
+# Marshall Island
+  KWAJ,   -,     ?,              NA,  Marshall Isl, KWAJ,        8.717956,   167.732537,  26
+# Thailand
+  THOM,   -,     OmKoi,          NA,  Thailand,     Om Koi,      17.797527,  -98.432220,  42
+  THPH,   ?,     Phuket,         NA,  Thailand,     Phuket,       0.0,         0.0,       43
+# Guam
+  GUAM,   -,     ?,              NA,  Guam,         PGUA,           13.454445,  144.808334,  47
+# Israel
+  ISBN,   -,     ?,              NA,  Israel,       ?,           31.994444,   34.898335,  41
+# Brasil
+#  SAOP,   -,     SaoPaulo,       NA,  Brasil,       ?,          -23.000000,  -45.000000,  46
+# Taiwan
+  TWWF,   -,     ?,              NA,  Taiwan,       ?,           25.072800,  121.772499,  48
+# Others
+#  TOGA,   ?,     ?,               ?,  ?,            ?,            0.0,         0.0,       14
+#  TOGA,    -,  Toga,            NA , Brasil,       TOGA,       -10.77389,   -62.336940,   14
+  TOGA,   ?,     ?,              FL,  ?,            ?,           26.66888,   -81.415833,   14
+# Note: Replace MIT with a 4-char string.
+  MIT,    ?,     ?,               ?,  ?,            ?,            0.0,         0.0,       17
+# Eureka, CA
+  ERKA,   KBHX,  Eureka,         CA,  USA,          KBHX,        40.498333, -124.291944,  50 
+# Saint Louis, MO
+  KLSX,   KLSX,  Saint Louis,    MO,  USA,          KLSX,        38.698889,  -90.682778,  52
+# NOAA, Ron Brown
+  NOAA, NRHB,    ?,                ?,  ?,            ?,            0.0,         0.0,      49

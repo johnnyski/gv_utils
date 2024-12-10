@@ -1,0 +1,118 @@
+CHANGES for gv_utils
+
+v1.17 (9/04/03)
+----------------
+1. gv_radar_site_info.data updated with latest production version.
+2. Fixed problem in which libraries could not be built if a library didn't
+   already exist in the target directory.  Brought configure.in up to date
+   with autoconf version 2.53 standards.
+
+v1.16 (2/23/01)
+----------------
+1. modified 'get_time_from_singlevos_product_filename' in gv_utilities.pl to
+   work with files in addition to 2A-53.
+2. Fixed Y2K bugs in gv_time.c and ./programs/construct_time_in_seconds.c.
+3. modified 'get_radar_num_for_site_name' in gv_utilities.pl to fix a bug in
+   TOGA processing.
+
+v1.15 (2/08/00)
+----------------
+1. Sgi doesn't have setenv, so use putenv instead.
+
+v1.14 (2/07/00)
+----------------
+1. Uses UTC for time conversion -- essentially no local zone conversion.
+   This fixes the daylight savings time bug.
+
+v1.13 (2/04/00)
+----------------
+1. Don't adjust for daylight savings time.
+
+v1.12 (12/21/99)
+----------------
+1. Uses configure.
+
+v1.11 (11/30/99)
+---------------
+* Changed radar name for GUAM in  gv_radar_site_info.data
+
+v1.10 (9/24/98)
+---------------
+* Minor changes in the Makefile.
+* Clarified the example section of the doc.
+* Changed lat/lon of KWAJ in gv_radar_site_info.data' to
+   8.717956/167.732537 (OLD values: 8.718889/167.731949).
+* Moved LDFLAGS from Makefile to Make.<machine>.
+
+v1.9 (8/17/98)
+----------------
+* Removed the machine dependent lib in Make.linux.
+* Added WSR88D_ID for GRAN in gv_radar_site_info.data.
+* Added warning messages in the installation section in README.
+* Added more time routine in gv_utilities.pl.
+* Fixed bug in gv_site.h and gv_string.h.
+
+v1.8 (6/15/98)
+---------------
+* Fixed bug in gv_utils_get_radar_site_info() -- affected when 'ALL' is 
+  passed in.
+* Added radar name for MIAM in 'gv_radar_site_info.data'.
+* Modified html pages (minor changes).
+* Added DARB for Berrimah data (Note: If TK_DARB is not defined in 
+  TSDIS toolkit, this package will use TK_DARW). Incremented GV_MAX_SITES by 1.
+
+v1.7 (6/9/98)
+----------------
+* Added html pages.
+* Changed the doc path in the Makefile.
+* Corrected WSR88D_ID for Miami in gv_radar_site_info.data
+
+v1.6 (6/4/98)
+----------------
+* Corrected comment in gv_radar_site_info.data.
+* Minor mod in Makefile w.r.t. doc.
+* Bug fixes in Makefile w.r.t. linking.
+
+v1.5 (5/29/98)
+----------------
+* Changed lat/lon for Kwaj.
+* Centralized the GV radar site information:
+   - Added access interface routine for both Perl and C
+     (see gv_site.h  and gv_utilities.pl for detail) 
+     and a program, 'get_gv_radar_site_info'. 
+   - Removed 'gv_radar_lat_lon.data'. 
+   - Removed 'read_data_from_lat_lon_file()'.
+   - Added 'gv_radar_site_info.data'.
+   - Added 'get_site_info_from_raw_file'.
+* Pre-appended 'gv_utils_' to library function names.
+* Changed the makefile to allow uninstalling everything and to simplify
+  software installation.
+* Requires RSL library v1.13 or above.
+
+v1.4 (4/17/97)
+---------------
+* Corrected a routine's comment.
+* Added more time routines.
+
+v1.3 (3/24/98)
+---------------
+* Corrected lat/lon for Gunn Point (Darwin) in gv_radar_lat_lon.data.
+* Changes in 'gv_utilities.pl':
+    - Added '/' to curr_dir 
+    - Added change2absolute_filename 
+    - Added get_gvs_dir_name
+
+v1.2 (1/26/98)
+----------------
+* Added more comments in gv_file.c
+* Added a routine in gv_utilities.{h,c} and a data file 'gv_radar_lat_lon.data'.
+* Changed uncompress_file() and compress_file().
+* Added: Make.{sgi|hp|linux|sun}.
+
+v1.1 (12/19/97)
+----------------
+* Added new routines.
+
+v1.0 (11/13/97)
+----------------
+* Initially created (The original codes were from 'gvs').
